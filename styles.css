@@ -132,6 +132,18 @@ body {
   flex-direction: column;
 }
 
+.winning-message.x {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.winning-message.circle {
+  background-color: rgba(0, 255, 0, 0.8);
+}
+
+.winning-message.show {
+  display: flex;
+}
+
 .winning-message button {
   padding: 20px 100px;
   font-size: 3rem;
@@ -144,8 +156,4 @@ body {
   background-color: black;
   color: white;
   border-color: white;
-}
-
-.winning-message.show {
-  display: flex;
 }

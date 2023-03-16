@@ -34,6 +34,8 @@ function startGame() {
   });
   setBoardHoverClass();
   winningMessage.classList.remove("show");
+  winningMessage.classList.remove("x");
+  winningMessage.classList.remove("circle");
 }
 
 function handleClick(e) {
@@ -58,7 +60,13 @@ function endGame(draw) {
   if (draw) {
     winningMessageTextElement.innerHTML = "Draw!";
   } else {
-    winningMessageTextElement.innerHTML = `${circleTurn ? "O" : "X"} Wins`;
+    if (circleTurn) {
+      winningMessageTextElement.innerHTML = "O Wins";
+      winningMessage.classList.add("circle");
+    } else {
+      winningMessageTextElement.innerHTML = "X Wins";
+      winningMessage.classList.add("x");
+    }
   }
   winningMessage.classList.add("show");
 }
