@@ -13,7 +13,7 @@ Contains all html elements, including:
 ######  styles.css
 Custom styling for html elements
 
-##### script.js
+###### script.js
 Game logic. Functions include:
 - startGame
 - setBoard
