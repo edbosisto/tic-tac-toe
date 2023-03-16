@@ -32,7 +32,7 @@ function startGame() {
     cell.removeEventListener("click", handleClick);
     cell.addEventListener("click", handleClick, { once: true });
   });
-  setBoardHoverClass();
+  setBoard();
   winningMessage.classList.remove("show");
   winningMessage.classList.remove("x");
   winningMessage.classList.remove("circle");
@@ -52,7 +52,7 @@ function handleClick(e) {
     endGame(true);
   } else {
     swapTurns();
-    setBoardHoverClass();
+    setBoard();
   }
 }
 
@@ -89,7 +89,7 @@ function swapTurns() {
   circleTurn = !circleTurn;
 }
 
-function setBoardHoverClass() {
+function setBoard() {
   board.classList.remove(X_CLASS);
   board.classList.remove(CIRCLE_CLASS);
   if (circleTurn) {
